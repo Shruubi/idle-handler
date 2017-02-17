@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Test Page</title>
+</head>
+<body>
+<h1>Wait for it...</h1>
+
+<script type="text/javascript" src="../dist/idlehandler.bundle.js"></script>
+<script type="text/javascript">
+	var handler = idleHandler.createIdleHandler(1, function () {
+		alert('called via idle handler');
+	});
+
+	window.onload = handler;
+</script>
+</body>
+</html>

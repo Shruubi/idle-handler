@@ -1,0 +1,17 @@
+{
+  "name": "idle-handler",
+  "version": "1.0.0",
+  "description": "A utility function for creating a page-idling handler",
+  "main": "src/idleHandler.js",
+  "scripts": {
+    "build-dist": "./node_modules/.bin/webpack --config=webpack.config.js"
+  },
+  "author": "Damon Swayn <me@shruubi.io>",
+  "license": "MIT",
+  "devDependencies": {
+    "webpack": "^1.13.2",
+    "babel-cli": "^6.18.0",
+    "babel-loader": "^6.2.5",
+    "babel-preset-latest": "^6.16.0"
+  }
+}
