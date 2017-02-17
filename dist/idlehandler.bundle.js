@@ -63,7 +63,6 @@ var idleHandler =
 	 */
 	var createIdleHandler = exports.createIdleHandler = function createIdleHandler(timeout, timeoutHandler) {
 	    return function () {
-	        console.log('creating idle timer');
 	        var idleInterval = setInterval(function () {
 	            window.idleTime = window.idleTime + 1;
 
@@ -73,12 +72,10 @@ var idleHandler =
 	        }, ONE_MINUTE_INTERVAL);
 
 	        window.addEventListener('mousemove', function () {
-	            console.warn("resetting timer");
 	            window.idleTime = 0;
 	        });
 
 	        window.addEventListener('keypress', function () {
-	            console.warn("resetting timer");
 	            window.idleTime = 0;
 	        });
 

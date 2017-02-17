@@ -1,6 +1,6 @@
 {
   "name": "idle-handler",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "A utility function for creating a page-idling handler",
   "main": "build/idleHandler.js",
   "scripts": {

@@ -11,7 +11,6 @@ window.idleTime = 0;
  */
 export const createIdleHandler = (timeout, timeoutHandler) => {
     return () => {
-        console.log('creating idle timer');
         let idleInterval = setInterval(() => {
             window.idleTime = window.idleTime + 1;
 
@@ -21,12 +20,10 @@ export const createIdleHandler = (timeout, timeoutHandler) => {
         }, ONE_MINUTE_INTERVAL);
 
         window.addEventListener('mousemove', () => {
-            console.warn("resetting timer");
             window.idleTime = 0;
         });
 
         window.addEventListener('keypress', () => {
-	        console.warn("resetting timer");
             window.idleTime = 0;
         });
 
